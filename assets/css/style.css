@@ -236,7 +236,8 @@ Coming Soon CSS
   z-index: 1;
   height: 100vh;
   overflow: hidden;
-  background-image: url(../../assets/img/image.png);
+  background: #000;
+  /* background-image: url(../../assets/img/image.png); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
