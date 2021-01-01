@@ -159,12 +159,19 @@
                         </div>
                         <form id="contactForm">
                             <div class="form-group">
+                                <label>إسمك</label>
                                 <input type="text" name="name" id="name" class="form-control" required data-error="يرجى إدخال اسمك" placeholder="الإسم">
                                 <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="email" id="phone_number" class="form-control" placeholder="رقم الهاتف للتواصل">
+                                <label>رقم هاتفك للتواصل</label>
+                                <input type="text" name="email" id="phone_number" class="form-control" placeholder="01xxxxxxxxx">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>التخصص المراد دراسته</label>
+                                <input type="text" name="field" id="field" class="form-control" placeholder="مثال: الطب، الهندسة، الإعلام، التجارة">
                                 <div class="help-block with-errors"></div>
                             </div>
 
@@ -211,16 +218,17 @@
                 e.preventDefault();
                 const name = document.getElementById('name');
                 const phone_number = document.getElementById('phone_number');
+                const field = document.getElementById('field');
                 const email = new Date().getTime() + '@test.com';
 
-                if (! name || ! name.value.length || ! phone_number || !phone_number.value.length) return;
+                if (! name || ! name.value.length || ! phone_number || !phone_number.value.length || !field || !field.value.length) return;
 
                 document.querySelector('#submitBtn').setAttribute('disabled', 'disabled')
                 document.querySelector('#submitBtn').setAttribute('class', 'btn btn-disabled')
 
 
                 let url = "https://gmail.us7.list-manage.com/subscribe/post?u=b1dabe42e0cfb6e60e0ec4eeb&amp;id=de707d6480".replace('/post?u=', '/post-json?u=')
-                url += `&c=displayMailChimpStatus&id=mc-embedded-subscribe-form&EMAIL=${email}&PHONE=${phone_number.value}&NAME=${name.value}`
+                url += `&c=displayMailChimpStatus&id=mc-embedded-subscribe-form&EMAIL=${email}&PHONE=${phone_number.value}&NAME=${name.value}&FIELD=${field.value}`
 
                 let script = window.document.createElement( 'script' );
                 script.src = url
