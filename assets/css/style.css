@@ -447,7 +447,8 @@ Sidebar Modal CSS
   width: 40%;
   overflow-y: scroll;
   height: 100%;
-  background-color: #ffffff;
+  color: #fff;
+  /* background-color: #ffffff; */
   -webkit-transition: .7s;
   transition: .7s;
   z-index: 1;
@@ -482,13 +483,14 @@ Sidebar Modal CSS
   margin-bottom: 0;
   font-size: 28px;
   font-weight: 700;
+  color: #fff;
 }
 
 .sidebar-modal .about-area .title p {
   font-size: 18px;
   margin-top: 12px;
   line-height: 1.7;
-  color: #333333;
+  color: #fff;
 }
 
 .sidebar-modal .contact-area .title {
@@ -499,6 +501,7 @@ Sidebar Modal CSS
   margin-bottom: 0;
   font-size: 28px;
   font-weight: 700;
+  color: #fff;
 }
 
 .sidebar-modal .contact-area .contact-form {
@@ -510,7 +513,7 @@ Sidebar Modal CSS
   border: none;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.15);
   box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.15);
-  background-color: #dfdfdf;
+  background-color: #fff;
   font-size: 13.5px;
   padding-left: 15px;
   color: #000000;
@@ -525,7 +528,7 @@ Sidebar Modal CSS
 .sidebar-modal .contact-area .contact-form form button {
   margin-top: 10px;
   border: none;
-  background-color: #000000;
+  background-color: coral;
   outline: 0;
   color: #ffffff;
   -webkit-transition: 0.5s;
@@ -653,6 +656,11 @@ Sidebar Modal CSS
 
 .sidebar-modal.active .sidebar-modal-inner {
   right: 0;
+  background-image: url(../../assets/img/sidebar1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*================================================
